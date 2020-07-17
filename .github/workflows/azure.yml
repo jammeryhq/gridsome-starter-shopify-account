@@ -16,7 +16,7 @@ on:
   push:
     branches: [main]
   release:
-    types: [created,update]
+    types: [created]
 
 env:
   NODE_VERSION: '12.x'                # set this to the node version to use
@@ -32,6 +32,6 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: Deploy To Azure
-      uses: thetre97/azure-deploy@master
+      uses: thetre97/azure-deploy@v1
       env:
         AZURE_STORAGE_CONTAINER_NAME: ${{ secrets.AZURE_CONTAINER_STARTERS }}
