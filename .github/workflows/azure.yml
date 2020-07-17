@@ -33,5 +33,6 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: Deploy To Azure
       uses: thetre97/azure-deploy@v1
-      env:
-        AZURE_STORAGE_CONTAINER_NAME: ${{ secrets.AZURE_CONTAINER_STARTERS }}
+      with:
+        connection-string: ${{ secrets.AZURE_CONNECTION_STRING }}
+        container-name: ${{ secrets.AZURE_CONTAINER_STARTERS }}
