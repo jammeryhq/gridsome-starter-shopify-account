@@ -34,4 +34,4 @@ jobs:
     - name: Deploy To Azure
       uses: thetre97/azure-deploy@master
       env:
-        AZURE_STORAGE_CONTAINER_NAME: ${{ secrets.AZURE_STORAGE_CONTAINER_NAME }}
+        AZURE_STORAGE_CONTAINER_NAME: ${{ secrets.AZURE_CONTAINER_STARTERS }}
