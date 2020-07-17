@@ -13,6 +13,8 @@
 # For more information on GitHub Actions for Azure, refer to https://github.com/Azure/Actions
 # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
 on:
+  push:
+    branches: [master]
   release:
     types: [created]
 
@@ -31,3 +33,5 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: Deploy To Azure
       uses: thetre97/azure-deploy@master
+      env:
+        AZURE_STORAGE_CONTAINER_NAME: ${{ secrets.AZURE_STORAGE_CONTAINER_NAME }}
