@@ -16,7 +16,7 @@ on:
   push:
     branches: [main]
   release:
-    types: [created,updated]
+    types: [created,update]
 
 env:
   NODE_VERSION: '12.x'                # set this to the node version to use
