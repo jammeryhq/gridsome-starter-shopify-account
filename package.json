@@ -1,5 +1,6 @@
 {
   "name": "gridsome-starter-shopify-account",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "gridsome build",
