@@ -18,6 +18,7 @@ jobs:
     - name: Deploy To Azure
       uses: thetre97/azure-deploy@master
       with:
-        milliseconds: 1000
         connection-string: ${{ secrets.AZURE_CONNECTION_STRING }}
         container-name: ${{ secrets.AZURE_CONTAINER_STARTERS }}
+        graphql-endpoint: ${{ secrets.GRAPHQL_API_ENDPOINT }}
+        graphql-secret: ${{ secrets.GRAPHQL_API_SECRET }}
